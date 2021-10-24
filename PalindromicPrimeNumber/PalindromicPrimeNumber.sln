@@ -14,7 +14,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		build.ps1 = build.ps1
 		build.sh = build.sh
 		GitVersion.yml = GitVersion.yml
-		..\..\..\Downloads\Compressed\TheMonarchs-master\Nuget.Config = ..\..\..\Downloads\Compressed\TheMonarchs-master\Nuget.Config
+		Nuget.Config = Nuget.Config
+		README.md = README.md
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{8273A822-78DF-4734-A93A-62D802DE9B1B}"

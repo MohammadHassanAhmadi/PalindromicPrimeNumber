@@ -45,25 +45,25 @@ namespace PalindromicPrimeNumber.IntegrationTest
             Action action = () => palindromicPrimeNumberProvider.GetPalindromicPrimeNumbers(1000, targetBase).ToArray();
 
             action.Should().Throw<UnsupportedBaseException>()
-                .WithMessage(string.Format(Messages.UnsuppotedTargetBase, targetBase));
+                .WithMessage(string.Format(Messages.UnsupportedTargetBase, targetBase));
         }
 
         [Fact]
         public void TestGetPalindromicPrimeNumbers_WhenBaseIsBinary_ResultMustBeAsExpected()
         {
             var palindromicPrimeNumberProvider = GetPalindromicPrimeNumberProvider();
-            var palPrimesLessThan1000 = palindromicPrimeNumberProvider.GetPalindromicPrimeNumbers(1000, 2);
+            var result = palindromicPrimeNumberProvider.GetPalindromicPrimeNumbers(1000, 2);
 
-            palPrimesLessThan1000.Should().Equal(binaryPalPrimesLessThan1000);
+            result.Should().Equal(binaryPalPrimesLessThan1000);
         }
 
         [Fact]
         public void GetPalindromicPrimeNumbers_WhenBaseIsDecimal_ResultMustBeAsExpected()
         {
             var palindromicPrimeNumberProvider = GetPalindromicPrimeNumberProvider();
-            var palPrimesLessThan1000 = palindromicPrimeNumberProvider.GetPalindromicPrimeNumbers(1000, 10);
+            var result = palindromicPrimeNumberProvider.GetPalindromicPrimeNumbers(1000, 10);
 
-            palPrimesLessThan1000.Should().Equal(decimalPalPrimesLessThan1000.Select(i => i.ToString()));
+            result.Should().Equal(decimalPalPrimesLessThan1000.Select(i => i.ToString()));
         }
     }
 }

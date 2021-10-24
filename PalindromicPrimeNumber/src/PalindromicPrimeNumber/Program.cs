@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using Microsoft.Extensions.DependencyInjection;
+using PalindromicPrimeNumber.Properties;
 using PalindromicPrimeNumber.Services;
 
 namespace PalindromicPrimeNumber
@@ -12,15 +13,23 @@ namespace PalindromicPrimeNumber
             var palindromicPrimeNumberProvider = GetServiceProvider()
                 .GetRequiredService<IPalindromicPrimeNumberProvider>();
 
-            do
+            try
             {
-                var toBase = GetTargetBaseFromUser();
+                do
+                {
+                    var toBase = GetTargetBaseFromUser();
 
-                var palindromicPrimeNumbersInTargetBae
-                    = palindromicPrimeNumberProvider.GetPalindromicPrimeNumbers(1000, toBase);
+                    var palindromicPrimeNumbersInTargetBae
+                        = palindromicPrimeNumberProvider.GetPalindromicPrimeNumbers(1000, toBase);
 
-                Display(palindromicPrimeNumbersInTargetBae);
-            } while (true);
+                    Display(palindromicPrimeNumbersInTargetBae);
+                } while (true);
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+            }
+            
         }
 
         private static void Display(IEnumerable<string> palindromicPrimeNumbersInTargetBae)
@@ -31,10 +40,13 @@ namespace PalindromicPrimeNumber
 
         private static int GetTargetBaseFromUser()
         {
-            Console.Write("Enter base: ");
+            Console.Write(Messages.EnterBaseNumber);
             var input = Console.ReadLine();
+            if(string.IsNullOrWhiteSpace(input))
+                throw new ArgumentException(Messages.BaseNumberIsRequired);
+
             if (!int.TryParse(input, out var toBase))
-                Console.WriteLine("[Error] Invalid inout for base number!");
+                throw new ArgumentException(Messages.InvalidInputForBaseNumber, input);
 
             return toBase;
         }

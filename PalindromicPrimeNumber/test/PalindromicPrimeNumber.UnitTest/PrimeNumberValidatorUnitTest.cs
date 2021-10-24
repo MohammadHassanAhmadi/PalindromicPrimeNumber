@@ -42,7 +42,8 @@ namespace PalindromicPrimeNumber.UnitTest
         public void TestValidate_WhenNumberIsPrime_ReturnsTrue()
         {
             var primeNumberValidator = new PrimeNumberValidator();
-            foreach (var number in primeNumbersLessThan1000) primeNumberValidator.Validate(number).Should().BeTrue();
+            foreach (var number in primeNumbersLessThan1000)
+                primeNumberValidator.Validate(number).Should().BeTrue();
         }
     }
 }

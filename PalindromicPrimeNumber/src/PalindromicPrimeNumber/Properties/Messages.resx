@@ -117,7 +117,16 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="UnsuppotedTargetBase" xml:space="preserve">
-    <value>Unsupported target base, base='{0}'.</value>
+  <data name="UnsupportedTargetBase" xml:space="preserve">
+    <value>Unsupported target base, base='{0}'</value>
+  </data>
+  <data name="InvalidInputForBaseNumber" xml:space="preserve">
+    <value>[Error] Invalid input for base number! input='{0}'</value>
+  </data>
+  <data name="EnterBaseNumber" xml:space="preserve">
+    <value>Enter base number (example: 2, 10, ...)</value>
+  </data>
+  <data name="BaseNumberIsRequired" xml:space="preserve">
+    <value>Base number is required, please input a valid number</value>
   </data>
 </root>

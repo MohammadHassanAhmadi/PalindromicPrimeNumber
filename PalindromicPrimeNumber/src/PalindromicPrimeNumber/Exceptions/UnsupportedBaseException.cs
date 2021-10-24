@@ -2,7 +2,7 @@
 
 namespace PalindromicPrimeNumber.Exceptions
 {
-    public class UnsupportedBaseException : ApplicationException
+    public class UnsupportedBaseException : Exception
     {
         public UnsupportedBaseException()
         {

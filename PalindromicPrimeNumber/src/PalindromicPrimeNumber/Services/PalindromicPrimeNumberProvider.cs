@@ -42,7 +42,7 @@ namespace PalindromicPrimeNumber.Services
                 serviceProvider.GetServices<IBaseConvertor>().SingleOrDefault(i => i.Base == inBase);
 
             if (targetBaseConvertor == null)
-                throw new UnsupportedBaseException(Messages.UnsuppotedTargetBase, inBase);
+                throw new UnsupportedBaseException(Messages.UnsupportedTargetBase, inBase);
 
             return targetBaseConvertor;
         }

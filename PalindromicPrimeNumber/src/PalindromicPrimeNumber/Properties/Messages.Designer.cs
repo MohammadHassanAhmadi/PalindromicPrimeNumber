@@ -61,11 +61,38 @@ namespace PalindromicPrimeNumber.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Unsupported target base, base=&apos;{0}&apos;..
+        ///   Looks up a localized string similar to Base number is required, please input a valid number.
         /// </summary>
-        public static string UnsuppotedTargetBase {
+        public static string BaseNumberIsRequired {
             get {
-                return ResourceManager.GetString("UnsuppotedTargetBase", resourceCulture);
+                return ResourceManager.GetString("BaseNumberIsRequired", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Enter base number (example: 2, 10, ...).
+        /// </summary>
+        public static string EnterBaseNumber {
+            get {
+                return ResourceManager.GetString("EnterBaseNumber", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to [Error] Invalid input for base number! input=&apos;{0}&apos;.
+        /// </summary>
+        public static string InvalidInputForBaseNumber {
+            get {
+                return ResourceManager.GetString("InvalidInputForBaseNumber", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Unsupported target base, base=&apos;{0}&apos;.
+        /// </summary>
+        public static string UnsupportedTargetBase {
+            get {
+                return ResourceManager.GetString("UnsupportedTargetBase", resourceCulture);
             }
         }
     }
