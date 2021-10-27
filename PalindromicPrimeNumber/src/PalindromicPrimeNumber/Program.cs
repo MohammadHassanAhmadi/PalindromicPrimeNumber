@@ -12,24 +12,22 @@ namespace PalindromicPrimeNumber
         {
             var palindromicPrimeNumberProvider = GetServiceProvider()
                 .GetRequiredService<IPalindromicPrimeNumberProvider>();
-
-            try
+            do
             {
-                do
+                try
                 {
                     var toBase = GetTargetBaseFromUser();
 
-                    var palindromicPrimeNumbersInTargetBae
+                    var palindromicPrimeNumbersInTargetBase
                         = palindromicPrimeNumberProvider.GetPalindromicPrimeNumbers(1000, toBase);
 
-                    Display(palindromicPrimeNumbersInTargetBae);
-                } while (true);
-            }
-            catch (Exception e)
-            {
-                Console.WriteLine(e.Message);
-            }
-            
+                    Display(palindromicPrimeNumbersInTargetBase);
+                }
+                catch (Exception e)
+                {
+                    Console.WriteLine(e.Message);
+                }
+            } while (true);
         }
 
         private static void Display(IEnumerable<string> palindromicPrimeNumbersInTargetBae)

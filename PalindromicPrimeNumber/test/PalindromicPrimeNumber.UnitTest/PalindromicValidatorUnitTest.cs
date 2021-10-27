@@ -39,7 +39,7 @@ namespace PalindromicPrimeNumber.UnitTest
         [InlineData("12ABcc%%cBA21")]
         [InlineData("12ABc%c%%cBA21")]
         [InlineData("12ABc%2c%cBA21")]
-        public void TestIsPalindromic_WhenValueIsNotPalindromic_ReturnsTrue(string value)
+        public void TestIsPalindromic_WhenValueIsNotPalindromic_ReturnsFalse(string value)
         {
             new PalindromeValidator().Validate(value).Should().BeFalse();
         }

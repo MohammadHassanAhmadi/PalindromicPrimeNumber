@@ -4,6 +4,7 @@ using System.Linq;
 using Microsoft.Extensions.DependencyInjection;
 using PalindromicPrimeNumber.Exceptions;
 using PalindromicPrimeNumber.Properties;
+using PalindromicPrimeNumber.Services.Convertors;
 
 namespace PalindromicPrimeNumber.Services
 {
